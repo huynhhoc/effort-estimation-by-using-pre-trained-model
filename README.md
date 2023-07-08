@@ -51,6 +51,21 @@ This should install isbsg package into the virtual environment. You can then use
     from isbsg.pretrainedmodel import load_pretrained_model
 
 ```
+If you have used this pre-trained model in a scientific publication, please cite this model as follows:
+
+```
+@ARTICLE{10151867,
+  author={Hoc, Huynh Thai and Silhavy, Radek and Prokopova, Zdenka and Silhavy, Petr},
+  journal={IEEE Access}, 
+  title={Comparing Stacking Ensemble and Deep Learning for Software Project Effort Estimation}, 
+  year={2023},
+  volume={11},
+  number={},
+  pages={60590-60604},
+  doi={10.1109/ACCESS.2023.3286372}}
+
+```
+
 You can uninstall the package by using the pip uninstall command in your terminal or command prompt:
 
 ```
