@@ -97,7 +97,7 @@ pretrained_model.fc1 = nn.Linear(new_input_size, pretrained_model.fc1.out_featur
 
 # SAMPLE
 
-Desharnais and Albrecht are selected for illustrating because their efforts have the same metrics as the effort in the ISBSG. The trained model obtained from Desharnais and Albrecht are: ``./weights/desharnais.pth`` and ``./weights/albrecht.pth``.
+Desharnais and Albrecht are selected for illustrating because their efforts have the same metrics as the effort in the ISBSG. The trained model obtained from Albrecht is: ``./weights/albrecht.pth``.
 
 To test the performance, we can use:
 
