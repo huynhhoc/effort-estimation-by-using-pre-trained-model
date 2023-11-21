@@ -1,5 +1,10 @@
+# WHAT IS TRANSFER LEARNING?
+Transfer learning is the reuse of a pre-trained model exposed to a large dataset to solve a new problem. In other words, it uses knowledge acquired from the pre-trained model to proceed with the new task. It is currently very popular in deep learning because it can train deep neural networks with comparatively little data.
+
+This approach achieves optimal performance faster than training neural networks from scratch because it leverages knowledge (features, weights, etc.) from previously trained models that already understand the features.
+
 # EFFORT ESTIMATION BY USING PRE-TRAINED MODEL
-This repository provides a pre-trained model to estimate software effort estimation. The pre-trained model is trained based on the ISBSG dataset (Release R1, 2020).
+This repository provides a pre-trained model to estimate software development efforts. The pre-trained model is trained based on the ISBSG dataset (Release R1, 2020).
 
 # ISBSG Repository
 
@@ -72,15 +77,15 @@ You can uninstall the package by using the pip uninstall command in your termina
  pip uninstall isbsg
 
 ```
-# How to load pre-trained model
+# How to load the pre-trained model
 
-Transfer learning based on a pre-trained model involves several steps as follows:
+Transfer learning based on a pre-trained model involves several steps, as follows:
 * Step 1: Load the pre-trained model: This model is trained on an ISBSG dataset.
-* Step 2: Freeze all layers except the last one: all layers, except for the last one, are frozen. Freezing involves setting the requires_grad attribute of each parameter to False, which preserves the learned features from the pre-trained model. This step enables fine-tuning of only the last layer for the new task.
+* Step 2: Freeze all layers except the last one: All layers, except for the last one, are frozen. Freezing involves setting the requires_grad attribute of each parameter to False, which preserves the learned features from the pre-trained model. This step enables fine-tuning of only the last layer for the new task.
 * Step 3: Create a new optimiser: a new optimiser is created specifically for the last layer of the model, which was set to require gradients in the previous step. Adam optimiser is chosen as the same as the PyDL model. 
-* Step 4: Continue training the model: Train the model on a new dataset using the standard PyTorch training loop. In each iteration, the input is forwarded through the model, the loss is computed, the gradients are computed, and the weights are updated using the optimiser. This process is repeated for a certain number of epochs or until the model converges. 
+* Step 4: Continue training the model: Train the model on a new dataset using the standard PyTorch training loop. In each iteration, the input is forwarded through the model, the loss is computed, the gradients are computed, and the weights are updated using the optimizer. This process is repeated for a certain number of epochs or until the model converges. 
 
-Here is an example of step 1, and 2:
+Here is an example of steps 1 and 2:
 
 ```
 from isbsg.pretrainedmodel import load_pretrained_model
@@ -97,7 +102,7 @@ pretrained_model.fc1 = nn.Linear(new_input_size, pretrained_model.fc1.out_featur
 
 # SAMPLE
 
-Desharnais and Albrecht are selected for illustrating because their efforts have the same metrics as the effort in the ISBSG. The trained model obtained from Albrecht is: ``./weights/albrecht.pth``.
+Desharnais and Albrecht are selected for illustration because their efforts have the same metrics as the effort in the ISBSG. The trained model obtained from Albrecht is: ``./weights/albrecht.pth``.
 
 To test the performance, we can use:
 
