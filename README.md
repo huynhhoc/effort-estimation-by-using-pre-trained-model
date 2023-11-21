@@ -1,7 +1,7 @@
 # WHAT IS TRANSFER LEARNING?
-Transfer learning is the reuse of a pre-trained model exposed to a large dataset to solve a new problem. In other words, it uses knowledge acquired from the pre-trained model to proceed with the new task. It is currently very popular in deep learning because it can train deep neural networks with comparatively little data.
+Transfer learning is the reuse of a pre-trained model that has been exposed to a large dataset to solve a new problem. In other words, it uses knowledge acquired from the pre-trained model to tackle the new task. It is currently trendy in deep learning because it can train deep neural networks with relatively minimal data.
 
-This approach achieves optimal performance faster than training neural networks from scratch because it leverages knowledge (features, weights, etc.) from previously trained models that already understand the features.
+This approach achieves optimal performance faster than training neural networks from scratch. This is achieved by leveraging the knowledge, encompassing features and weights, acquired from previously trained models that already understand relevant features.
 
 # EFFORT ESTIMATION BY USING PRE-TRAINED MODEL
 This repository provides a pre-trained model to estimate software development efforts. The pre-trained model is trained based on the ISBSG dataset (Release R1, 2020).
